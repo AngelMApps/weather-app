@@ -23,7 +23,7 @@
 		<h3 class="lat-h3">{arrayWeather.timezone}</h3>
 		
 	</div>
-	<div class="col s12 m3 l3">
+	<div class=" div-wind col s12 m3 l3">
 		<strong>Wind</strong>
 		<h3 style="color: #aedbff; margin-top: 5px;margin-bottom: 5px;">deg: {arrayWeather.wind.deg}</h3>
 		<h3 style="color: #e2cbff;margin-top: 5px;margin-bottom: 5px;">gust: {arrayWeather.wind.gust} </h3>
@@ -40,12 +40,15 @@
 	
 </main>
 <style>
+    main{
+        padding: 5px 0px 0px 20px;
+    }    
 	div {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		background-color: #2b3061;
+		background-color: #1e213a;
 		border-radius: 8px;
 		padding: 10px !important;
 		margin: 10px;
@@ -78,7 +81,12 @@
 		margin-top: 4px;
 		margin-bottom: 4px;
 		color: #49ecec;
-	}
+    }
+    @media only screen and (max-width: 836px){
+        main{
+            padding: 5px 10px;
+        }
+    }
 	@media only screen and (max-width:796px){
 		.div-temp>strong{
 			font-size: 28px;
@@ -93,5 +101,10 @@
 		.div-temp>strong{
 			font-size: 22px;
 		}
-	}
+    }
+    @media only screen and (max-width:616px){
+		.div-wind>h3{
+			font-size: 22px;
+		}
+    }
 </style>
